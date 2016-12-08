@@ -12,5 +12,3 @@
 (deftest reverse-bwt-test
   (is (= (reverse-bwt (bwt "The rain in Spain stays mainly in the plain"))
          "The rain in Spain stays mainly in the plain")))
-
-(run-tests)
