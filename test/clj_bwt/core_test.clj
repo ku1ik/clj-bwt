@@ -6,9 +6,9 @@
   (is (= (rotations [1 2 3]) '((1 2 3) (2 3 1) (3 1 2)))))
 
 (deftest bwt-test
-  (is (= (bwt "The rain in Spain stays mainly in the plain")
+  (is (= (bwt "The rain in Spain stays mainly in the plain" \$)
          "nnyseennn $rplmthhtT aa aapn iiiiiiS  y s la")))
 
 (deftest reverse-bwt-test
-  (is (= (reverse-bwt (bwt "The rain in Spain stays mainly in the plain"))
+  (is (= (reverse-bwt (bwt "The rain in Spain stays mainly in the plain" \$) \$)
          "The rain in Spain stays mainly in the plain")))
