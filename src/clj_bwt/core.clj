@@ -7,7 +7,12 @@
 (defn bwt [text eof-char]
   "Returns Burrows-Wheeler transform of the given string"
   (let [input (str text eof-char)]
-    (->> input rotations (map vec) sort (map last) (apply str))))
+    (->> input
+         rotations
+         (map vec)
+         sort
+         (map last)
+         (apply str))))
 
 (defn reverse-bwt [text eof-char]
   "Returns reverse Burrows-Wheeler transform of the given (transformed) string"
